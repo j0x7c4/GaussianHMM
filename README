@@ -1,0 +1,17 @@
+#Requirements
+
++ Install numpy
+
++ Install sci-kit
+
+ <http://scikit-learn.org/stable/index.html>
+
+#How to run?
+
+'
+python hmm.py train test
+'
+
++ train: directory for storing training data
+
++ test: directory for storing testing data
