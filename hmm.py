@@ -39,8 +39,8 @@ if __name__ == "__main__":
     test_dir = sys.argv[2]
     train_data_file = filter(lambda x:x[0]!='.', os.listdir(train_dir))
     test_data_file = filter(lambda x:x[0]!='.', os.listdir(test_dir))
-    TR = [np.array(load_single_data(train_dir+'/'+file)) for file in train_data_file]
-    TE = [np.array(load_single_data(test_dir+'/'+file)) for file in test_data_file]
+    TR = [np.array(load_single_data(train_dir+os.sep+file)) for file in train_data_file]
+    TE = [np.array(load_single_data(test_dir+os.sep+file)) for file in test_data_file]
     model = train(TR)
     for i in range(len(TE)):
         print test_data_file[i]
